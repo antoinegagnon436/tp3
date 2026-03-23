@@ -13,29 +13,30 @@
     </header>
 
     <main>
-        <form>
+        <a class="screen-reader-only focusable" href="#formulaire">Accéder au fomulaire</a>
+        <form id="fomulaire">
             
             <fieldset class="ctnValidation">
                 <legend>Format de la brochure</legend>
                 <ul>
                     <li>
-                        <input name="format" id="imprime" type="radio" value="imprime" required>
+                        <input class="screen-reader-only" name="format" id="imprime" type="radio" value="imprime" required>
                         <label for="imprime">
-                            <img src="" alt="imprimé">
+                            <img src="images/icon-file-print.svg" alt="imprimé">
                             imprimé
                         </label>
                     </li>
                     <li>
-                        <input name="format" id="pdf" type="radio" value="pdf">
+                        <input class="screen-reader-only" name="format" id="pdf" type="radio" value="pdf">
                         <label for="pdf">
-                            <img src="" alt="PDF">
+                            <img src="images/icon-file-pdf.svg" alt="PDF">
                             PDF
                         </label>
                     </li>
                     <li>
-                        <input name="format" id="epub" type="radio" value="epub">
+                        <input class="screen-reader-only" name="format" id="epub" type="radio" value="epub">
                         <label for="epub">
-                            <img src="" alt="EPUB">
+                            <img src="images/icon-file-epub.svg" alt="EPUB">
                             EPUB
                         </label>
                     </li>
@@ -49,7 +50,7 @@
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
                         <label class="champ__etiquette" for="prenom">Prénom</label>
-                        <input class="champ--prenom" id="prenom" name="prenom" type="text" required title="Veuillez entrer votre prénom"/>
+                        <input class="champ--prenom" id="prenom" name="prenom" type="text" pattern="^[A-Za-zÀ-ÿ\s'-]+$" required title="Veuillez entrer votre prénom"/>
                     </div>
                     <p class="champ__erreur erreur"></p>
                 </div>
@@ -57,14 +58,14 @@
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
                         <label class="champ__etiquette" for="nom">Nom</label>
-                        <input class="champ--nom" id="nom" name="nom" type="text" required title="Veuillez entrer votre nom de famille"/>
+                        <input class="champ--nom" id="nom" name="nom" type="text" pattern="^[A-Za-zÀ-ÿ\s'-]+$" required title="Veuillez entrer votre nom de famille"/>
                     </div>
                     <p class="champ__erreur erreur"></p>
                 </div>
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
-                        <label class="champ__etiquette" for="courriel">Courriel</label>
+                        <label class="champ__etiquette" for="courriel">Courriel <span class="detail">(nom@exemple.com)</span></label>
                         <input class="champ--courriel" id="courriel" name="courriel" type="email" required title="Format attendu : nom@exemple.com"/>
                     </div>
                     <p class="champ__erreur erreur"></p>
@@ -72,7 +73,7 @@
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
-                        <label class="champ__etiquette">Téléphone</label>
+                        <label class="champ__etiquette">Téléphone <span class="detail">(514 555 4563)</label>
                         <input class="champ--tel-code" id="tel_code" name="tel_code" type="text" pattern="\d{3}" maxlength="3" size="3" required title="Code régional 3 chiffres"/>
                         <input class="champ--tel-num" id="tel_num" name="tel_num" type="text" pattern="\d{7}" maxlength="7" size="7" required title="Numéro 7 chiffres"/>
                     </div>
@@ -85,7 +86,7 @@
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
-                        <label class="champ__etiquette" for="adresse">Adresse</label>
+                        <label class="champ__etiquette" for="adresse">Adresse <span class="detail">(123, rue principal)</label>
                         <input class="champ--adresse" id="adresse" name="adresse" type="text" required title="Veuillez entrer votre adresse civique"/>
                     </div>
                     <p class="champ__erreur erreur"></p>
@@ -138,7 +139,7 @@
                 <label for="info">Je désire recevoir des informations mensuelles par courriel</label>
             </div>
 
-            <button type="submit">Commander</button>
+            <button>Commander</button>
         </form>
     </main>
 
