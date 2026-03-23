@@ -1,11 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr-CA">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Commander une brochure gratuite</title>
-    </head>
-    <body>
-        <!-- Votre code HTML commence ici -->
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commander une brochure gratuite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <form>
+            
+            <fieldset class="ctnValidation">
+                <legend>Format de la brochure</legend>
+                <ul>
+                    <li>
+                        <input name="format" id="imprime" type="radio" value="imprime" required>
+                        <label for="imprime">
+                            <img src="" alt="imprimé">
+                            imprimé
+                        </label>
+                    </li>
+                    <li>
+                        <input name="format" id="pdf" type="radio" value="pdf">
+                        <label for="pdf">
+                            <img src="" alt="PDF">
+                            PDF
+                        </label>
+                    </li>
+                    <li>
+                        <input name="format" id="epub" type="radio" value="epub">
+                        <label for="epub">
+                            <img src="" alt="EPUB">
+                            EPUB
+                        </label>
+                    </li>
+                </ul>
+                <p class="erreur"></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informations de contact</legend>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette" for="prenom">Prénom</label>
+                        <input class="champ--prenom" id="prenom" name="prenom" type="text" required title="Veuillez entrer votre prénom"/>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette" for="nom">Nom</label>
+                        <input class="champ--nom" id="nom" name="nom" type="text" required title="Veuillez entrer votre nom de famille"/>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette" for="courriel">Courriel</label>
+                        <input class="champ--courriel" id="courriel" name="courriel" type="email" required title="Format attendu : nom@exemple.com"/>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette">Téléphone</label>
+                        <input class="champ--tel-code" id="tel_code" name="tel_code" type="text" pattern="\d{3}" maxlength="3" size="3" required title="Code régional 3 chiffres"/>
+                        <input class="champ--tel-num" id="tel_num" name="tel_num" type="text" pattern="\d{7}" maxlength="7" size="7" required title="Numéro 7 chiffres"/>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informations postales</legend>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette" for="adresse">Adresse</label>
+                        <input class="champ--adresse" id="adresse" name="adresse" type="text" required title="Veuillez entrer votre adresse civique"/>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette" for="pays">Pays</label>
+                        <select class="champ--pays" id="pays" name="pays" required title="Veuillez choisir un pays">
+                            <option value="">Sélectionner un pays</option>
+                            <option value="Canada">Canada</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette" for="region">Province ou État</label>
+                        <select class="champ--region" id="region" name="region" required title="Veuillez choisir votre région">
+                            <option value="">Sélectionner une région</option>
+                            <optgroup label="Canada">
+                                <option value="QC">Québec</option>
+                                <option value="ON">Ontario</option>
+                                <option value="AB">Alberta</option>
+                                <option value="BC">Colombie-Britannique</option>
+                            </optgroup>
+                            <optgroup label="USA">
+                                <option value="NY">New York</option>
+                                <option value="CA">Californie</option>
+                                <option value="TX">Texas</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+
+                <div class="champ ctnValidation">
+                    <div class="champ__conteneur">
+                        <label class="champ__etiquette" for="cp">Code postal <span class="detail">(A1A 1A1)</span></label>
+                        <input class="champ--cp" id="cp" name="cp" type="text" pattern="([A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d)|(\d{5})" required title="Format attendu : A1A 1A1 (Canada) ou 11111 (USA)"/>
+                    </div>
+                    <p class="champ__erreur erreur"></p>
+                </div>
+            </fieldset>
+
+            <div class="champ">
+                <input id="info" name="info" type="checkbox">
+                <label for="info">Je désire recevoir des informations mensuelles par courriel</label>
+            </div>
+
+            <button type="submit">Commander</button>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
 </html>
