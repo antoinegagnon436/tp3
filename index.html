@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr-CA">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Antoine Gagnon">
     <title>Commander une brochure gratuite</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -17,7 +18,13 @@
         <form id="formulaire">
             
             <fieldset class="ctnValidation">
-                <legend>Format de la brochure</legend>
+                <legend>
+                    <div class="legend_conteneur">
+                        <img class="legend_image" src="images/icon-format-brochure.svg" alt=""> 
+                        <span class="texte_legend">Format de la brochure</span>
+                    </div>
+                </legend>
+
                 <ul>
                     <li>
                         <input class="screen-reader-only" name="format" id="imprime" type="radio" value="imprime" required>
@@ -45,51 +52,61 @@
             </fieldset>
 
             <fieldset>
-                <legend>Informations de contact</legend>
+                <legend>
+                    <div class="legend_conteneur">
+                        <img class="legend_image" src="images/icon-contact.svg" alt=""> 
+                        <span>Informations de contact</span>
+                    </div>
+                </legend>
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
                         <label class="champ__etiquette" for="prenom">Prénom</label>
-                        <input class="champ--prenom" id="prenom" name="prenom" type="text" pattern="^[A-Za-zÀ-ÿ\s'-]+$" required title="Veuillez entrer votre prénom"/>
+                        <input class="champ--prenom" id="prenom" name="prenom" type="text" pattern="^[A-Za-zÀ-ÿ\s'-]+$" required title="Veuillez entrer votre prénom">
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
                         <label class="champ__etiquette" for="nom">Nom</label>
-                        <input class="champ--nom" id="nom" name="nom" type="text" pattern="^[A-Za-zÀ-ÿ\s'-]+$" required title="Veuillez entrer votre nom de famille"/>
+                        <input class="champ--nom" id="nom" name="nom" type="text" pattern="^[A-Za-zÀ-ÿ\s'-]+$" required title="Veuillez entrer votre nom de famille">
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
                         <label class="champ__etiquette" for="courriel">Courriel <span class="detail">(nom@exemple.com)</span></label>
-                        <input class="champ--courriel" id="courriel" name="courriel" type="email" required title="Format attendu : nom@exemple.com"/>
+                        <input class="champ--courriel" id="courriel" name="courriel" type="email" required title="Format attendu : nom@exemple.com">
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
-                        <label class="champ__etiquette">Téléphone <span class="detail">(514 555 4563)</label>
-                        <input class="champ--tel-code" id="tel_code" name="tel_code" type="text" pattern="\d{3}" maxlength="3" size="3" required title="Code régional 3 chiffres"/>
-                        <input class="champ--tel-num" id="tel_num" name="tel_num" type="text" pattern="\d{7}" maxlength="7" size="7" required title="Numéro 7 chiffres"/>
+                        <label class="champ__etiquette">Téléphone <span class="detail">(514 555 4563)</span></label>
+                        <input class="champ--tel-code" id="tel_code" name="tel_code" type="text" pattern="\d{3}" maxlength="3" size="3" required title="Code régional 3 chiffres">
+                        <input class="champ--tel-num" id="tel_num" name="tel_num" type="text" pattern="\d{7}" maxlength="7" size="7" required title="Numéro 7 chiffres">
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
             </fieldset>
 
             <fieldset>
-                <legend>Informations postales</legend>
+                <legend>
+                    <div class="legend_conteneur">
+                        <img class="legend_image" src="images/icon-postal.svg" alt=""> 
+                        <span>Informations postales</span>
+                    </div>
+                </legend>
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
-                        <label class="champ__etiquette" for="adresse">Adresse <span class="detail">(123, rue principal)</label>
-                        <input class="champ--adresse" id="adresse" name="adresse" type="text" required title="Veuillez entrer votre adresse civique"/>
+                        <label class="champ__etiquette" for="adresse">Adresse <span class="detail">(123, rue principal)</span></label>
+                        <input class="champ--adresse" id="adresse" name="adresse" type="text" required title="Veuillez entrer votre adresse civique">
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
 
                 <div class="champ ctnValidation">
@@ -101,7 +118,7 @@
                             <option value="USA">USA</option>
                         </select>
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
 
                 <div class="champ ctnValidation">
@@ -122,15 +139,15 @@
                             </optgroup>
                         </select>
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
 
                 <div class="champ ctnValidation">
                     <div class="champ__conteneur">
                         <label class="champ__etiquette" for="cp">Code postal <span class="detail">(A1A 1A1)</span></label>
-                        <input class="champ--cp" id="cp" name="cp" type="text" pattern="([A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d)|(\d{5})" required title="Format attendu : A1A 1A1 (Canada) ou 11111 (USA)"/>
+                        <input class="champ--cp" id="cp" name="cp" type="text" pattern="([A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d)|(\d{5})" required title="Format attendu : A1A 1A1 (Canada) ou 11111 (USA)">
                     </div>
-                    <p class="champ__erreur erreur"></p>
+                    <p class="champ__erreur erreur" role="alert"></p>
                 </div>
             </fieldset>
 

@@ -25,7 +25,6 @@
 
 /* ------- Variables ------- */
 :root {
-    --couleur-orange: #d35400;
     --couleur-fond: linear-gradient(135deg, #0c0c57, #4a1e1b);
     --gris-bordure: #e0e0e0;
     --police-titre: 'Playfair Display', serif;
@@ -162,10 +161,19 @@ legend {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 1.25rem; 
-    color: #666;
+}
+
+.legend_conteneur {
     display: flex;
     align-items: center;
-    gap: 0.6rem; 
+}
+
+.legend_image {
+    padding: 0.3rem;
+    margin-right: 0.7rem;
+    background-color: #060060;
+    width: 1.5rem;      
+    border-radius: 0.4rem;     
 }
 
 /* format */
@@ -202,11 +210,77 @@ legend {
 
 
 .ctnValidation ul li input[type="radio"]:checked + label {
-    border-color: var(--couleur-orange);
-    background-color: rgba(211, 84, 0, 0.05); 
+    border-color: #0d00c1;
+    background-color: rgba(0, 14, 211, 0.05); 
     box-shadow: 0 0.2px 5px #000000;
 }
 
+/* champ */
 
+.champ {
+    margin-bottom: 1.25rem; 
+}
+
+.champ__conteneur {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem; 
+}
+
+label.champ__etiquette {
+    font-weight: 500;
+    font-size: 0.9rem; 
+}
+
+.champ--prenom,
+.champ--nom,
+.champ--courriel,
+.champ--adresse,
+.champ--cp,
+.champ--tel-num,
+select {
+    padding: 0.75rem 0.9rem; 
+    border: 0.12rem solid var(--gris-bordure); 
+    border-radius: 0.37rem; 
+}
+
+.champ--tel-code { 
+    width: 5rem; 
+    margin-right: 0.6rem; 
+    padding: 0.75rem 0.9rem; 
+    border: 0.12rem solid var(--gris-bordure); 
+    border-radius: 0.37rem; 
+}
+
+/* pied */
+
+.info {
+    background: lightgray;
+    padding: 1.25rem; 
+    border-radius: 0.5rem; 
+    display: flex;
+    gap: 0.5rem; 
+    align-items: flex-start; 
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+button {
+    background-color: #060060;
+    color: white;
+    border: none;
+    padding: 0.9rem 2.5rem; 
+    border-radius: 0.5rem; 
+    font-weight: 600;
+    font-size: 1.12rem; 
+    cursor: pointer;
+    float: right;
+}
+
+button:hover {
+    background-color: #0b00a4;
+}
 
 
