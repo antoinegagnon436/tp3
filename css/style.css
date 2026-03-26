@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /**
- * @author X <X@csfoy.ca>
+ * @author Antoine Gagnon <2542166@csfoy.ca>
  *
  * TABLE DES MATIERES
  *
@@ -25,7 +25,7 @@
 
 /* ------- Variables ------- */
 :root {
-    --couleur-fond: linear-gradient(135deg, #0c0c57, #4a1e1b);
+    --couleur-fond: linear-gradient(135deg, #0c0c57, #3a1c50, #4a1e1b);
     --gris-bordure: #e0e0e0;
     --police-titre: 'Playfair Display', serif;
     --police-corps: 'DM Sans', sans-serif;
