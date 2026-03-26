@@ -103,6 +103,25 @@ img {
     background-position: 99px 0;
 }
 
+/* header */
+
+header {
+    background-color:rgb(37, 31, 79);
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-detail {
+    color: gold;
+    font-style: italic;
+}
+
+
 /* ------- table ------- */
 
 body {
@@ -110,8 +129,14 @@ body {
     background: var(--couleur-fond);
     margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+    align-items: center; 
     color: #000000;
+}
+
+.detail {
+    color: #666; 
+    font-size: 0.7rem;
 }
 
 /* formulaire */
@@ -122,7 +147,7 @@ form {
     padding-left: 5rem;
     padding-right: 5rem;
     border-radius: 0.75rem; 
-    margin: 2rem;
+    margin: 3rem;
     box-shadow: 0 1px 8px #000000;
 }
 
@@ -141,6 +166,45 @@ legend {
     display: flex;
     align-items: center;
     gap: 0.6rem; 
+}
+
+/* format */
+
+.ctnValidation ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 0;
+}
+
+
+.ctnValidation ul li label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    border: 0.12rem solid var(--gris-bordure);
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+
+.ctnValidation ul li label img {
+    width: 3rem;
+    height: 3.75rem;
+    margin-bottom: 0.6rem;
+}
+
+
+.ctnValidation ul li input[type="radio"]:checked + label {
+    border-color: var(--couleur-orange);
+    background-color: rgba(211, 84, 0, 0.05); 
+    box-shadow: 0 0.2px 5px #000000;
 }
 
 
