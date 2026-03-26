@@ -102,6 +102,15 @@ img {
     background-position: 99px 0;
 }
 
+input:user-invalid, textarea:user-invalid, select:user-invalid {
+    border: 1px solid red;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid rgb(22, 0, 119);
+}
+
+
 /* header */
 
 header {
@@ -210,6 +219,12 @@ legend {
 
 
 .ctnValidation ul li input[type="radio"]:checked + label {
+    border-color: #0d00c1;
+    background-color: rgba(0, 14, 211, 0.05); 
+    box-shadow: 0 0.2px 5px #000000;
+}
+
+.ctnValidation ul li input[type="radio"]:focus + label {
     border-color: #0d00c1;
     background-color: rgba(0, 14, 211, 0.05); 
     box-shadow: 0 0.2px 5px #000000;
