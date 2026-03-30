@@ -298,4 +298,39 @@ button:hover {
     background-color: #0b00a4;
 }
 
+/* mobile */
+@media (max-width: 48rem) {
+    header {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 1.2rem;
+    }
 
+    form {
+        margin: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .ctnValidation ul {
+        grid-template-columns: 1fr;
+    }
+
+    .champ--tel-code {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .champ--tel-num {
+        width: 100%;
+    }
+
+    button {
+        float: none;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+}
